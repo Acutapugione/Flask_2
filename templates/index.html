@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ol class="navbar-nav me-auto mb-2">
+    {% for item in my_variables %}
+    <li class="nav-item mb-2">
+        <a class="btn btn-outline-primary" href="{{ url_for('get_food', id=my_variables.index(item))}}">{{  item.tittle }}</a> 
+    </li>
+    {% endfor %}
+</ol>
+{% endblock %}

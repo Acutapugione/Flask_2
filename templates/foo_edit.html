@@ -1,0 +1,25 @@
+
+{% extends 'foo.html' %}
+
+{% block content %}
+<form>
+    <!-- "tittle": "З вишнею",
+        "color": "Червоний",
+        "description": "Смачний пиріг з вишнею" -->
+    <div class="mb-3">
+      <label for="tittle" class="form-label">Назва</label>
+      <input type="text" class="form-control" id="tittle" aria-describedby="tittleHelp"
+      placeholder="{{ foo.tittle }}">
+      <div id="tittleHelp" class="form-text">Введіть назву для їжі.</div>
+    </div>
+    <div class="mb-3">
+      <label for="color" class="form-label">Колір</label>
+      <input type="text" class="form-control" id="color" placeholder="{{ foo.color }}">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Опис</label>
+        <input type="text" class="form-control" id="description" placeholder="{{ foo.description }}">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
